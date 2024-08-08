@@ -15,8 +15,8 @@ data "aws_ami" "app_ami" {
 }
 
 resource "aws_instance" "web_gratis" {
-  ami           = data.aws_ami.app_ami.id
-  instance_type = "t2.micro"
+  ami           = ami-03972092c42e8c0ca
+  instance_type = var.instance_type
 
   tags = {
     Name = "HelloWorld"
